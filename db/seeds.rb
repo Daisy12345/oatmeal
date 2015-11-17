@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Plane.create([{ name: 'GAdodo', rows: 4, columns: 4}])
+Plane.create([{ name: '747', rows: 6, columns: 10}])
+
+User.create([{ name: "Greg"}])
+User.create([{ name: "Tanya"}])
+
+# Flight.create([{origin: "Sydney", desti}])
