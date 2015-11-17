@@ -17,8 +17,8 @@
     <% @reservations.each do |reservation| %>
       <tr>
         <td><%= reservation.number %></td>
-        <td><%= reservation.user %></td>
-        <td><%= reservation.flight %></td>
+        <td><%= reservation.user.name %></td>
+        <td><%= reservation.flight.number %></td>
         <td><%= reservation.seat %></td>
         <td><%= link_to 'Show', reservation %></td>
         <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
