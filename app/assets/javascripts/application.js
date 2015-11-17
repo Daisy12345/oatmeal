@@ -12,4 +12,19 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+
+//= require underscore-min
+//= require backbone-min
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
+//= require flights
+//= require_self
+
+$(document).ready(function(){
+
+	console.log("doc ready fired");
+	oatmeal.init();
+	console.log("doc ready fired");
+});
