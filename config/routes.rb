@@ -1,8 +1,22 @@
 Rails.application.routes.draw do
+
+  devise_for :admins
+  devise_for :customers
+  
+  # resources
   resources :reservations
   resources :users
   resources :flights
   resources :planes
+
+  # admin
+  
+
+  root to: "home#index"
+
+  # customer
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
