@@ -20,6 +20,7 @@
 //= require_tree ./views
 //= require_tree ./routers
 //= require flights
+//= require planes
 //= require_self
 
 $(document).ready(function(){
