@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
   # admin
   
-
   root to: "home#index"
 
   # customer
