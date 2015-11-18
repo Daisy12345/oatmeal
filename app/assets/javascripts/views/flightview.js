@@ -10,9 +10,11 @@ oatmeal.FlightView = Backbone.View.extend({
 	// },
 
 	initialize: function(collection) {
+	this.listenTo(collection, 'add', function(flight){
 		console.log("flightview init function");
 		var view = new oatmeal.FlightListView({model: flight});
 		view.render();
+	});
 
 	}
 	// 	this.$(this.textFieldSelector).focus();
