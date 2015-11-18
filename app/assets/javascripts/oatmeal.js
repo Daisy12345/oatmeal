@@ -12,8 +12,10 @@
 var oatmeal = oatmeal || {};
 
 oatmeal.init = function() {
+	oatmeal.planes = new oatmeal.Planes();
 	oatmeal.flights = new oatmeal.Flights();
-	oatmeal.view = new oatmeal.AppView(oatmeal.flights);
+	oatmeal.flightview = new oatmeal.FlightView(oatmeal.flights);
+	// oatmeal.view = new oatmeal.AppView(oatmeal.flights);
 
 	oatmeal.flights.fetch({
 		success: function() {
@@ -21,7 +23,9 @@ oatmeal.init = function() {
 
 			// Poll the server for new secrets every 4 seconds.
 			setInterval(function () {
-				app.flights.fetch();
+				console.log('poll server again');
+				oatmeal.flights.fetch();
+				console.log(oatmeal.flights);
 			}, 4000); // 4 seconds
 		},
 		error: function() {

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>oatmeal</title>
-  <link rel="stylesheet" type="text/css" href="backbone.css">
+
 </head>
 <body>
 
@@ -14,7 +14,7 @@
       <thead>
         <tr>
         <th><a href="">Planes</a></th>
-        <th><a href="">Flights</a></th>
+        <th><a href="/flights">Flights</a></th>
         <th><a href="">Admin</a></th>
         </tr>
       </thead>
@@ -26,8 +26,8 @@
     <table class="table1">
       <thead>
         <tr class="th">
-        <th class="title">Virgin Airlines</th>
-        <th><button class="submit">Create Plane</button></th>
+        <th class="title">Oatmeal Airlines</th>
+        <th><button class="submit">Create Flight</button></th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -40,15 +40,15 @@
       <thead></thead>
       <tbody>
       <tr>
-        <td><input type="text" placeholder="flight#" class="text"/></td>
-        <td><input type="text" placeholder="date" class="text"/></td>
-        <td><input type="text" placeholder="to" class="text"/></td>
-        <td><input type="text" placeholder="to" class="from"/></td>
+        <td><input type="text" placeholder="name" class="text"/></td>
+        <td><input type="text" placeholder="rows" class="text"/></td>
+        <td><input type="text" placeholder="cols" class="text"/></td>
+        <td></td>
       </tr>
       <tr>
-        <td><input type="text" placeholder="plane" class="text"/></td>
         <td>&nbsp;</td>
-        <td colspan="2"><button class="submit1">Cancel</button><span class="space"/><button class="submit1">Save</button></td>
+        <td>&nbsp;</td>
+        <td colspan="2"><button class="cancel-button">Cancel</button><span class="space"/><button class="save-button">Save</button></td>
       </tr>       
       </tbody>
     </table>
@@ -57,7 +57,7 @@
 
   <section id="seat">
     <div class="page">
-      <h1>Flights</h1>
+      <h1>plane name</h1>
     </div>  
   </section>
 
@@ -67,10 +67,6 @@
   
   
 
-  
-  <script src="vendors/jquery-2.1.4.min.js"></script>
-  <script src="vendors/underscore-min.js"></script>
-  <script src="vendors/backbone-min.js"></script>
 
 </body>
 </html>
