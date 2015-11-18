@@ -19,8 +19,7 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
-//= require flights
-//= require planes
+//= require oatmeal
 //= require_self
 
 $(document).ready(function(){
