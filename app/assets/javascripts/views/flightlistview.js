@@ -7,6 +7,7 @@ oatmeal.FlightListView = Backbone.View.extend({
 		console.log("flight list view render")
 
 		this.$el.text(this.model.get('origin'));
+		this.$el.prependTo('.flight-list');
 		// console.log("flights from flightlistview");
 		// console.log(oatmeal.flights);
 		// console.log("first from flightlistview");
@@ -17,7 +18,7 @@ oatmeal.FlightListView = Backbone.View.extend({
 
 
 		
-		this.$el.prependTo('.flight-list');
+		
 		// $( ".flight-list" ).after( "flight" );
 	}
 });
