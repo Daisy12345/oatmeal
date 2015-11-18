@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Plane.create([{ name: 'GAdodo', rows: 4, columns: 4}])
+Plane.create([{ name: 'GAdodo', rows: 3, columns: 4}])
 Plane.create([{ name: '747', rows: 6, columns: 10}])
 
 User.create([{ name: "Greg"}])
@@ -13,4 +13,4 @@ User.create([{ name: "Tanya"}])
 
 Flight.create([{origin: "Sydney", destination: "Melbourn", date: "05/05/2015", plane_id: 1, number: "7557"}])
 
-Reservation.create([{number: "BD556", user_id: 2, flight_id: 1, seat:  "32B"}])
+Reservation.create([{number: "BD556", user_id: 2, flight_id: 1, seat:  "3B"}])

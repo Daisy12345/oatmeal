@@ -34,75 +34,69 @@
     </section>
 
     <section id="user-flight" class="flight">
-    	<table>
+    	<table class="table3">
     		<thead></thead>
     		<tbody>
-    			<td>Date</td>
-    			<td>Flight <%= flight number %></td>
-    			<td>From > To</td>
+    			<td><p>Date</p></td>
+    			<td><p>Flight <%= flight number %></p></td>
+    			<td><p>From > To</p></td>
     		</tbody>
     	</table>
     </section>
 
     <section id="content">
     	<div class="flight-seat">
-		<table class="table2">
+		<table class="table4">
 			<thead></thead>
 			<tbody>
-			<tr>	
-				<td><h1></h1></td>		
-				<td><h1>A</h1></td>
-				<td><h1>A</h1></td>
-				<td><h1>A</h1></td>
-				<td><h1>A</h1></td>
-			</tr>
-			<tr>	
-				<td><h1>21</h1></td>		
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
-			</tr>
-			<tr>			
-				<td><h1>21</h1></td>
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
-			</tr>
-			<tr>			
-				<td><h1>21</h1></td>
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
-				<td><button type="button" >avail</button></td>
+			<tr>
+				<td style="width:10%"><h1></h1></td>
+				<td class="bottom-line align"><h1>A</h1></td>
+				<td class="bottom-line align"><h1>B</h1></td>
+				<td class="bottom-line align"><h1>C</h1></td>
+				<td  style="width:20%" class="bottom-line align"><h1>D</h1></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td class="right-line" style="text-align:right"><h1>1</h1></td>
+				<td><button type="button" class="1a">avail</button></td>
+				<td><button type="button" class="1b">avail</button></td>
+				<td><button type="button" class="1c">avail</button></td>
+				<td class="right-line"><button type="button" class="1d">avail</button></td>
+			</tr>
+			<tr>			
+				<td class="right-line" style="text-align:right"><h1>2</h1></td>
+				<td><button type="button" class="2a">avail</button></td>
+				<td><button type="button" class="2b">avail</button></td>
+				<td><button type="button" class="2c">avail</button></td>
+				<td class="right-line" class="2d"><button type="button">avail</button></td>
+			</tr>
+			<tr>			
+				<td class="right-line" style="text-align:right"><h1>3</h1></td>
+				<td class="bottom-line"><button type="button" class="3a">avail</button></td>
+				<td class="bottom-line"><button type="button">avail</button></td>
+				<td class="bottom-line"><button type="button">avail</button></td>
+				<td class="bottom-line right-line"><button type="button">avail</button></td>
 			</tr>				
 			</tbody>
 		</table>
     	</div>
     </section>
 
-	<section id="seat">
-		<div class="page">
-			<h1>Flights Search Results</h1>
+	<section id="select-seat">
+		<div class="seat-detail">
+			<table>
+				<thead></thead>
+				<tbody>
+				<tr>
+					<th><h1>Seat-number</h1></th>
+					<th><h1><button class="submit1" style="border:3px solid grey">Select Seat</button></h1></th>
+				</tr>
+				</tbody>
+			</table>
 		</div>	
 	</section>
 
-    <footer id="footer"></footer>
 </section>
-
-	
-	
-
-	
-	<script src="vendors/jquery-2.1.4.min.js"></script>
-	<script src="vendors/underscore-min.js"></script>
-	<script src="vendors/backbone-min.js"></script>
 
 </body>
 </html>
