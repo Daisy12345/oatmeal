@@ -11,6 +11,9 @@ class Plane < ActiveRecord::Base
 		end
 		return seatList
 	end
+	def numberOfSeats
+		makeSeats.length
+	end
 
 
 
