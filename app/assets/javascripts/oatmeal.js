@@ -15,6 +15,7 @@ oatmeal.init = function() {
 	oatmeal.planes = new oatmeal.Planes();
 	oatmeal.flights = new oatmeal.Flights();
 	oatmeal.flightview = new oatmeal.FlightView(oatmeal.flights);
+	oatmeal.planeview = new oatmeal.PlaneView(oatmeal.flights);
 	// oatmeal.view = new oatmeal.AppView(oatmeal.flights);
 
 	oatmeal.flights.fetch({
