@@ -22,3 +22,94 @@
 
 <%= link_to 'Edit', edit_flight_path(@flight) %> |
 <%= link_to 'Back', flights_path %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>oatmeal</title>
+
+</head>
+<body>
+
+<section id="airlineapp">
+    <header id="header">
+		<table class="table">
+			<thead>
+				<tr>
+				<th style="background-color:white"></th>
+				<th><a href="">Search</a></th>
+				<th>User name</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+    </header>
+
+	<section id="main" class="main">
+		<table class="table1">
+			<thead>
+				<tr class="th">
+				<th class="title">Virgin Airlines</th>
+				<th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+    </section>
+
+  <section>
+  	<h2><%= @flight.date %>   Flight <%= @flight.number %>  <%= @flight.origin %>><%= @flight.destination %></h2>
+  </section>
+
+	<section id="seat">
+		<div id="seat-table">
+			<h1>Flights Search Results</h1>
+		</div>	
+	</section>
+
+    <footer id="footer"></footer>
+</section>
+
+  <script>
+    var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var rows = <%= @flight.plane.rows %>;      //1-30
+    var columns = <%= @flight.plane.columns %>;   //A-H
+    var result = "";
+    result += "<table class='table4'>";
+
+    result += "<thead>";
+    result += "<tr>";
+    result +="<td></td>";
+    for (var x = 0; x < columns; x++) {
+      result += "<td>";
+      result += alphabet[x];
+      result += "</td>";  
+    }    
+    result += "</tr>";
+    result += "</thead>"
+
+    result += "<tbody>";
+    for (var y = 0; y < rows; y++) {
+      result += "<tr>"; 
+      result += "<td>";
+      result += y+1;
+      result += "</td>"; 
+    for (var x = 0; x < columns; x++) {
+        result += "<td>";
+        result += "<button class='reserved'><span>"
+        result += "avail";
+        result += "</span></button>"
+        result += "</td>";
+      }
+      result += "</tr>";
+    }
+    result += "</tbody>";
+    result += "</table>";
+    $('#seat-table').html(result);
+    console.log(result);
+  </script>
+
+
+</body>
+</html>
