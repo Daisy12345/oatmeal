@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>oatmeal</title>
-
 </head>
 <body>
 <div id="flight-page">
@@ -13,7 +12,7 @@
         <thead>
           <tr>
           <th><a href="">Planes</a></th>
-          <th><a href="">Flights</a></th>
+          <th><a href="/flights">Flights</a></th>
           <th><a href="">Admin</a></th>
           </tr>
         </thead>
@@ -25,7 +24,7 @@
       <table class="table1">
         <thead>
           <tr class="th">
-          <th class="title">Virgin Airlines</th>
+          <th class="title">Oatmeal Airlines</th>
           <th><button class="submit">Create Plane</button></th>
           </tr>
         </thead>
@@ -40,15 +39,14 @@
                 <thead></thead>
                 <tbody>
                   <tr>
-                    <td><input name="number" type="text" placeholder="flight#" class="text"/></td>
-                    <td><input name="date" type="text" placeholder="date" class="text"/></td>
-                    <td><input name="to" type="text" placeholder="to" class="text"/></td>
-                    <td><input name="from" type="text" placeholder="to" class="from"/></td>
-                  </tr>
-                  <tr>
+                    <td><input name="number" type="text" placeholder="flight" class="text"/></td>
                     <td><input name="plane" type="text" placeholder="plane" class="text"/></td>
-                    <td>&nbsp;</td>
-                    <td colspan="2"><button class="submit1">Cancel</button><span class="space"/><button class="submit1">Save</button></td>
+                    <td><input name="date" type="text" placeholder="date" class="text"/></td>
+                  </tr>
+                  <tr>  
+                    <td><input name="from" type="text" placeholder="from" class="text"/></td>
+                    <td><input name="to" type="text" placeholder="to" class="text"/></td>
+                    <td colspan="2"><button class="cancel-button">Cancel</button><span class="space"/><button class="submit">Save</button></td>
                   </tr>       
                 </tbody>
               </table>
@@ -58,42 +56,21 @@
 
     
       <div class="page">
-        <h1>Flights</h1>
-     
           <table class="flight-list">
             <tr>
-              <th>
-                Date
-              </th>
-              <th>
-                Flight
-              </th>
-              <th>
-                From>To
-              </th>
-              <th>
-                Plane
-              </th>
-              <th>
-                Seats
-              </th>
+              <td><h1>Date</h1></td>
+              <td><h1>Flight<h1></td>
+              <td><h1>From>To</h1></td>
+              <td><h1>Plane</h1></td>
+              <td><h1>Seats</h1></td>
           </tr>
           </table>
-      </div>  
-   
-
-      <footer id="footer"></footer>
+      </div>
   </section>
 
 </div>
 </body>
 </html>
-
-
-
-
-
-
 
 
 <!-- <p id="notice"><%= notice %></p>
