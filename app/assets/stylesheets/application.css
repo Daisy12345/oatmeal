@@ -191,6 +191,11 @@ button.reserved:focus:after {
   content: 'X';
 }
 
+.dead {
+    text-align: left;
+    color: green;
+}
+
 
 
 
