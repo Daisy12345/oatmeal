@@ -14,8 +14,13 @@ var oatmeal = oatmeal || {};
 oatmeal.init = function() {
 	oatmeal.planes = new oatmeal.Planes();
 	oatmeal.flights = new oatmeal.Flights();
+	oatmeal.reservations = new oatmeal.Reservations();
 	oatmeal.flightview = new oatmeal.FlightView(oatmeal.flights);
 	oatmeal.planeview = new oatmeal.PlaneView(oatmeal.flights);
+
+
+	oatmeal.reservation = new oatmeal.Reservations();
+	oatmeal.reservationview = new oatmeal.ReservationView(oatmeal.reservation);
 	// oatmeal.view = new oatmeal.AppView(oatmeal.flights);
 
 	oatmeal.flights.fetch({

@@ -7,49 +7,61 @@
 
 </head>
 <body>
+<div id="reservation-page">
+	<section id="airlineapp">
+	    <header id="header">
+			<table class="table">
+				<thead>
+					<tr>
+					<th style="background-color:white"></th>
+					<th><a href="">Search</a></th>
+					<th>User name</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+	    </header>
 
-<section id="airlineapp">
-    <header id="header">
-		<table class="table">
-			<thead>
-				<tr>
-				<th style="background-color:white"></th>
-				<th><a href="">Search</a></th>
-				<th>User name</th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
-    </header>
+		<section id="main" class="main">
+			<table class="table1">
+				<thead>
+					<tr class="th">
+					<th class="title">Virgin Airlines</th>
+					<th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+	    </section>
 
-	<section id="main" class="main">
-		<table class="table1">
-			<thead>
-				<tr class="th">
-				<th class="title">Virgin Airlines</th>
-				<th>
-				</tr>
-			</thead>
-			<tbody></tbody>
-		</table>
-    </section>
+	  <section>
+	  	<h2><%= @flight.date %>   Flight <%= @flight.number %>  <%= @flight.origin %>><%= @flight.destination %>  <br>Plane  <%= @flight.plane.name %></h2> 
+	  	number of seats on plane:  <%= @flight.plane.numberOfSeats %>
+	  	number of seat available:  <%= @flight.availableSeatsNumber %>
+	  </section>
+	  <div class="selection">
+	  </div>
+		<form class="reservation-form">
+			<input name="usernum" type="text" placeholder="your name" class="text"/>
+			<input name="flightnum" type="text" placeholder="flightnum" class="text"/>
+			<input name="seatInput" id="seatInput" type="text" placeholder="seat" class="text" />
 
-  <section>
-  	<h2><%= @flight.date %>   Flight <%= @flight.number %>  <%= @flight.origin %>><%= @flight.destination %>  <br>Plane  <%= @flight.plane.name %></h2> 
-  	number of seats on plane:  <%= @flight.plane.numberOfSeats %>
-  	number of seat available:  <%= @flight.availableSeatsNumber %>
-  </section>
+			<button class="submit" type="submit">Book Seat</button>
+		</form>
+		<section id="seat">
+			<div id="seat-table">
+				<h1>Flights Search Results</h1>
+			</div>	
+		</section>
 
-	<section id="seat">
-		<div id="seat-table">
-			<h1>Flights Search Results</h1>
-		</div>	
+	    <footer id="footer"><%= @flight.listReservedSeats %></footer>
 	</section>
-
-    <footer id="footer"><%= @flight.listReservedSeats %></footer>
-</section>
-
+</div>
   <script>
+
+
+
+  	$("#reservation-form").hide();
   	 var flight1 = new oatmeal.Flight({number: "<%= @flight.number %>",
   	 	 numberOfSeats: "<%= @flight.plane.numberOfSeats %>",
   	 	 origin: "<%= @flight.origin %>",
@@ -109,6 +121,14 @@
     for(var j = 0; j < rSeats.length; j++){
     	$("#"+rSeats[j]).hide();
     }
+var choice;
+$(".reserved").click( function()
+{
+   choice = this.id; 
+   	$(".selection").html("Your choice: <h1>" + choice + "</h1>");
+   	$("#reservation-form").show();
+   	$("#seatInput").val(choice);
+});
   </script>
 
 
