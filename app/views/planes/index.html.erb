@@ -11,9 +11,9 @@
       <table class="table">
         <thead>
           <tr>
-          <th><a href="">Planes</a></th>
+          <th><a href="/planes">Planes</a></th>
           <th><a href="/flights">Flights</a></th>
-          <th><a href="">Admin</a></th>
+          <th><a href="/admin/sign_in">Admin</a></th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -46,8 +46,7 @@
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td colspan="2"><button class="cancel-button">Cancel</button><span class="space"/><button class="submit" type="submit">Save</button></td>
+                <td colspan="3"><button class="cancel-button">Cancel</button><span class="space"/><button class="submit" type="submit">Save</button></td>
 
               </tr>       
               </tbody>
@@ -56,15 +55,18 @@
         </form>
       </section>
 
+
     <section id="seat">
       <div id="planeName" class="page">
         <h1>plane name</h1>
       </div>  
     </section>
 
+
     <div id="table" class="flight-seat"></div>
     
     <script>
+
     $("#table").hide();
 
     $(".submit").click( function()
@@ -116,19 +118,13 @@
           $('#table').html(result);
           console.log(result);
       } 
+
   </script>
-</body>
-</html>
+ </section>
 
-
-
-
-
-  </section>
 </div>
 </body>
 </html>
-
 
 
 <!-- <p id="notice"><%= notice %></p>
