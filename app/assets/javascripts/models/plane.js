@@ -15,6 +15,4 @@ oatmeal.Plane = Backbone.Model.extend({
 			console.log(event);
 		} );
 	}
-
-
 });
