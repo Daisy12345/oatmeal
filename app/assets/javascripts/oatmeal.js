@@ -33,7 +33,7 @@ oatmeal.init = function() {
 				console.log('poll server again');
 				oatmeal.flights.fetch();
 				console.log(oatmeal.flights);
-			}, 100); 
+			}, 100099); 
 		},
 		error: function() {
 			console.log('error loading flights');

@@ -11,7 +11,7 @@ oatmeal.FlightListView = Backbone.View.extend({
 		// this.$el.text(this.model.get('destination'));
 		// this.$el.prependTo('.flight-list');
 
-     	this.$el.html("<td>" + this.model.get('date') + "</td><td>" + this.model.get('number') + "</td><td>" + this.model.get('origin') + ">"  + this.model.get('destination') + "</td><td>" + this.model.get('date') + "</td><td>" +  this.model.get('availableSeatsNumber') + "</td>");
+     	this.$el.html("<td>" + this.model.get('date') + "</td><td>" + this.model.get('number') + "</td><td>" + this.model.get('origin') + ">"  + this.model.get('destination') + "</td><td>" + this.model.get('date') + "</td><td>" +  this.model.get('availableSeatsNumber') + "</td><td></td>");
      	this.$el.appendTo('.flight-list');
 		// console.log("flights from flightlistview");
 		// console.log(oatmeal.flights);
