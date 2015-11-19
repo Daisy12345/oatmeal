@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aeroplane seating table</title>
+  <link rel="stylesheet" type="text/css" href="backbone.css">
+</head>
+<body>
+  <div id="table"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var rows = 3;   // 1-30
+    var columns = 4; // A-H
+    var result = "";
+
+    result += "<table border=1>";
+    result += "<tbody>";
+
+    for (var y = 0; y < rows; y++) {
+      result += "<tr>";
+
+      for (var x = 0; x < columns; x++) {
+        result += "<td>";
+        result += (y + 1) + alphabet[x];
+        result += "</td>";
+      }
+
+      result += "</tr>";
+    }
+
+    result += "</tbody>";
+    result += "</table>";
+
+    $('#table').html(result);
+
+    console.log(result);
+  </script>
+</body>
+</html>
+
+
+
+
+<section id="content">
+      <div class="flight-seat">
+    <table class="table4">
+      <thead></thead>
+      <tbody>
+      <tr>
+        <td style="width:10%"><h1></h1></td>
+        <td class="bottom-line align"><h1>A</h1></td>
+        <td class="bottom-line align"><h1>B</h1></td>
+        <td class="bottom-line align"><h1>C</h1></td>
+        <td  style="width:20%" class="bottom-line align"><h1>D</h1></td>
+      </tr>
+      <tr>
+        <td class="right-line" style="text-align:right"><h1>1</h1></td>
+        <td><button class="reserved"><span>avail</span></button></td>
+        <td><button class="reserved"><span>avail</span></button></td>
+        <td><button class="reserved"><span>avail</span></button></td>
+        <td class="right-line"><button class="reserved"><span>avail</span></button></td>
+      </tr>
+      <tr>      
+        <td class="right-line" style="text-align:right"><h1>2</h1></td>
+        <td><button class="reserved"><span>avail</span></button></td>
+        <td><button class="reserved"><span>avail</span></button></td>
+        <td><button class="reserved"><span>avail</span></button></td>
+        <td class="right-line"><button class="reserved"><span>avail</span></button></td>
+      </tr>
+      <tr>      
+        <td class="right-line" style="text-align:right"><h1>3</h1></td>
+        <td class="bottom-line"><button class="reserved"><span>avail</span></button></td>
+        <td class="bottom-line"><button class="reserved"><span>avail</span></button></td>
+        <td class="bottom-line"><button class="reserved"><span>avail</span></button></td>
+        <td class="bottom-line right-line"><button class="reserved"><span>avail</span></button></td>
+      </tr>       
+      </tbody>
+    </table>
+      </div>
+    </section>
