@@ -11,9 +11,9 @@
       <table class="table">
         <thead>
           <tr>
-          <th><a href="">Planes</a></th>
+          <th><a href="/planes">Planes</a></th>
           <th><a href="/flights">Flights</a></th>
-          <th><a href="">Admin</a></th>
+          <th><a href="/admin/sign_in">Admin</a></th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -46,8 +46,7 @@
               </tr>
               <tr>
                 <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td colspan="2"><button class="cancel-button">Cancel</button><span class="space"/><button class="submit" type="submit">Save</button></td>
+                <td colspan="3"><button class="cancel-button">Cancel</button><span class="space"/><button class="submit" type="submit">Save</button></td>
 
               </tr>       
               </tbody>
@@ -70,7 +69,6 @@
     var columns = 5;   //A-H
     var result = "";
     result += "<table class='table4'>";
-
     result += "<thead>";
     result += "<tr>";
     result +="<td></td>";
@@ -90,7 +88,7 @@
       result += "</td>"; 
     for (var x = 0; x < columns; x++) {
         result += "<td>";
-        result += "<button class='reserved'><span>"
+        result += "<button class='try-reserve'><span>"
         result += "avail";
         result += "</span></button>"
         result += "</td>";
@@ -102,18 +100,11 @@
     $('#table').html(result);
     console.log(result);
   </script>
-</body>
-</html>
+ </section>
 
-
-
-
-
-  </section>
 </div>
 </body>
 </html>
-
 
 
 <!-- <p id="notice"><%= notice %></p>
