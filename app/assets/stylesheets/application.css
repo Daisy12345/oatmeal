@@ -27,7 +27,8 @@ body {
   font-family: arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-image: url("OatmealAir.png");
+/*  background-image: url("OatmealAir.png");
+  background-repeat: no-repeat;*/
 }
 
 header {
@@ -212,7 +213,9 @@ button.try-reserve:focus:after {
 
 .dead {
     text-align: left;
-    color: green;
+    color: grey;
+    background-color: grey;
+    disabled: disabled;
 }
 
 
