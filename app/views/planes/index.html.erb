@@ -39,9 +39,9 @@
               <thead></thead>
               <tbody>
               <tr>
-                <td><input name="name" type="text" placeholder="name" class="text"/></td>
-                <td><input id = "rows" name="rows" type="text" placeholder="rows" class="text"/></td>
-                <td><input id = "columns" name="columns" type="text" placeholder="cols" class="text"/></td>
+                <td><input id="nameInput" name="name" type="text" placeholder="name" class="text"/></td>
+                <td><input id="rows" name="rows" type="text" placeholder="rows" class="text"/></td>
+                <td><input id="columns" name="columns" type="text" placeholder="cols" class="text"/></td>
                 <td></td>
               </tr>
               <tr>
@@ -57,7 +57,7 @@
       </section>
 
     <section id="seat">
-      <div class="page">
+      <div id="planeName" class="page">
         <h1>plane name</h1>
       </div>  
     </section>
@@ -75,6 +75,7 @@
          //  $("#reservation-form").show();
          //  $("#seatInput").val(choice);
          makeTable();
+         $("#planeName").html("<h1>" + $("#nameInput").val() + "</h1>");
          $("#table").show();
       });
       var makeTable = function(){

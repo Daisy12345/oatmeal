@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   # admin
   
-  root to: "planes#index"
+  root to: "flights#search"
 
   # customer
 

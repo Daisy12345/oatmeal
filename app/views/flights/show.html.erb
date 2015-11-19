@@ -45,6 +45,9 @@
 			<input name="usernum" type="text" placeholder="your name" class="text"/>
 			<input name="flightnum" type="text" placeholder="flightnum" class="text"/>
 			<input name="seatInput" id="seatInput" type="text" placeholder="seat" class="text" />
+       <%= select( "id", User.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>
+
+
 
 			<button class="submit" type="submit">Book Seat</button>
 		</form>

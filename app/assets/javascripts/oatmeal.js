@@ -21,6 +21,7 @@ oatmeal.init = function() {
 
 	oatmeal.reservation = new oatmeal.Reservations();
 	oatmeal.reservationview = new oatmeal.ReservationView(oatmeal.reservation);
+	oatmeal.flightsearchview = new oatmeal.FlightSearchView();
 	// oatmeal.view = new oatmeal.AppView(oatmeal.flights);
 
 	oatmeal.flights.fetch({
@@ -38,4 +39,12 @@ oatmeal.init = function() {
 			console.log('error loading flights');
 		}
 	});
+
+
 };
+
+	var searchFlights = function(){
+          var foundFlights = oatmeal.flights.where({origin: "SYD"});
+          console.log(foundFlights);
+          return foundFlights;
+	}
