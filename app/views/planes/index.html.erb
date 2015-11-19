@@ -40,8 +40,8 @@
               <tbody>
               <tr>
                 <td><input name="name" type="text" placeholder="name" class="text"/></td>
-                <td><input name="rows" type="text" placeholder="rows" class="text"/></td>
-                <td><input name="columns" type="text" placeholder="cols" class="text"/></td>
+                <td><input id = "rows" name="rows" type="text" placeholder="rows" class="text"/></td>
+                <td><input id = "columns" name="columns" type="text" placeholder="cols" class="text"/></td>
                 <td></td>
               </tr>
               <tr>
@@ -63,44 +63,58 @@
     </section>
 
     <div id="table" class="flight-seat"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
     <script>
-    var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var rows = 4;      //1-30
-    var columns = 5;   //A-H
-    var result = "";
-    result += "<table class='table4'>";
+    $("#table").hide();
 
-    result += "<thead>";
-    result += "<tr>";
-    result +="<td></td>";
-    for (var x = 0; x < columns; x++) {
-      result += "<td>";
-      result += alphabet[x];
-      result += "</td>";  
-    }    
-    result += "</tr>";
-    result += "</thead>"
+    $(".submit").click( function()
+      {
+        alert("gg");
+         // choice = this.id; 
+         //  $(".selection").html("Your choice: <h1>" + choice + "</h1>");
+         //  $("#reservation-form").show();
+         //  $("#seatInput").val(choice);
+         makeTable();
+         $("#table").show();
+      });
+      var makeTable = function(){
+          var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          var rows = $("#rows").val()  || 1;      //1-30
+          var columns = $("#columns").val()  || 1;   //A-H
+          var result = "";
+          result += "<table class='table4'>";
 
-    result += "<tbody>";
-    for (var y = 0; y < rows; y++) {
-      result += "<tr>"; 
-      result += "<td>";
-      result += y+1;
-      result += "</td>"; 
-    for (var x = 0; x < columns; x++) {
-        result += "<td>";
-        result += "<button class='reserved'><span>"
-        result += "avail";
-        result += "</span></button>"
-        result += "</td>";
-      }
-      result += "</tr>";
-    }
-    result += "</tbody>";
-    result += "</table>";
-    $('#table').html(result);
-    console.log(result);
+          result += "<thead>";
+          result += "<tr>";
+          result +="<td></td>";
+          for (var x = 0; x < columns; x++) {
+            result += "<td>";
+            result += alphabet[x];
+            result += "</td>";  
+          }    
+          result += "</tr>";
+          result += "</thead>"
+
+          result += "<tbody>";
+          for (var y = 0; y < rows; y++) {
+            result += "<tr>"; 
+            result += "<td>";
+            result += y+1;
+            result += "</td>"; 
+          for (var x = 0; x < columns; x++) {
+              result += "<td>";
+              result += "<button class='reserved'><span>"
+              result += "avail";
+              result += "</span></button>"
+              result += "</td>";
+            }
+            result += "</tr>";
+          }
+          result += "</tbody>";
+          result += "</table>";
+          $('#table').html(result);
+          console.log(result);
+      } 
   </script>
 </body>
 </html>
