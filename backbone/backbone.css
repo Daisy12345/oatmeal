@@ -53,23 +53,6 @@ th.title {
 	font-size: 40px;
 }
 
-button {
-  height:30px;
-  font-size: 12px;
-  color:rgb(248, 0, 0);
-  border-color: rgb(248, 0, 0);
-  background-color: white;
-}
-
-button:focus {
-  font-size: 12px;
-  height:30px;
-  color:rgb(248, 0, 0);
-  border-color: rgb(248, 0, 0);
-  font-weight: bold;
-  background-color: rgb(207, 255, 255);
-}
-
 .submit {
   background-color: rgb(248, 0, 0);
   -moz-border-radius: 8px;
@@ -144,6 +127,14 @@ p {
  
 }
 
+button {
+  height:30px;
+  font-size: 12px;
+  color:rgb(248, 0, 0);
+  border-color: rgb(248, 0, 0);
+  background-color: white;
+}
+
 .flight-seat {
   margin-top:5px;
   margin-left:40px;
@@ -162,8 +153,6 @@ p {
   text-align: center;
 }
 
-
-
 .seat-detail {
     margin-top:20px;
     margin-left:180px;
@@ -171,6 +160,25 @@ p {
     margin-bottom:50px;
     border: 2px solid rgb(248, 0, 0);
 }
+
+button.reserved:focus {       
+     background-color: rgb(207, 255, 255);
+     
+} 
+
+button.reserved:focus span {
+     display: none; 
+}
+
+button.reserved:focus:after {
+     content: "X";
+}
+
+
+
+
+
+
 
 
 
